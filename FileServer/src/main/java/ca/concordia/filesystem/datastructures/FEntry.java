@@ -44,4 +44,10 @@ public class FEntry {
     public short getFirstBlock() {
         return firstBlock;
     }
+    public void setFirstBlock(short firstblock) {
+        if (firstblock < 0) {
+            throw new IllegalArgumentException("Firstblock cannot be negative.");
+        }
+        this.firstBlock = firstblock;
+    }
 }
